@@ -2,6 +2,8 @@
 
 postgres:
   use_upstream_repo: True
+  custom_repo_url: ''
+  custom_repo_gpgkey: ''
   version: '9.5'
   pkg: postgresql
   pkgs_extra: []
@@ -68,3 +70,5 @@ postgres:
   linux:
     #Alternatives system are disabled by a 'altpriority=0' pillar.
     altpriority:
+
+
