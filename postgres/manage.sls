@@ -15,12 +15,6 @@ include:
 
 {%- endif %}
 
-# Ensure that Salt is able to use postgres modules
-
-postgres-reload-modules:
-  test.succeed_with_changes:
-    - reload_modules: True
-
 # User states
 
 {%- for name, user in postgres.users|dictsort() %}
