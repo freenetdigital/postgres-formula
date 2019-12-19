@@ -78,9 +78,6 @@ postgresql-config-dir:
     - group: {{ postgres.group }}
     - dir_mode: {{ postgres.conf_dir_mode }}
     - force: True
-    - recurse:
-      - user
-      - group
     - makedirs: True
     - require:
       - cmd: postgresql-cluster-prepared
