@@ -78,7 +78,6 @@ postgresql-config-dir:
     - group: {{ postgres.group }}
     - dir_mode: {{ postgres.conf_dir_mode }}
     - force: True
-    - file_mode: 644
     - recurse:
       - user
       - group
