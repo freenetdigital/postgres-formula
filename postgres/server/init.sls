@@ -17,7 +17,7 @@ include:
 # Install, configure and start PostgreSQL server
 postgresql-server:
   pkg.installed:
-    - pkgs: {{ pkgs }}
+    - pkgs: {{ pkgs | tojson}}
 {%- if postgres.use_upstream_repo == true %}
     - refresh: True
     - require:
