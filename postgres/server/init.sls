@@ -24,7 +24,7 @@ postgresql-server:
       - pkgrepo: postgresql-repo
 {%- endif %}
   {%- if postgres.fromrepo %}
-    - fromrepo: {{ postgres.fromrepo }}
+    - fromrepo: {{ postgres.fromrepo | tojson}}
   {%- endif %}
   {%- if grains.os == 'MacOS' %}
      #Register as Launchd LaunchAgent for system users
